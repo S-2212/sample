@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+body {
+	background:radial-gradient(#7fffbf, #fff);
+	height: 300px;
+}
+
+.box {
+	display: flex;
+	 
+}
+.container {
+	display: flex;
+	margin: auto;
+    text-align: center;
+    font-weight: bold;
+    color: dimgray;
+    font-size: 20px;
+    justify-content: center;
+    gap: 20px;
+}
+.buy {
+	width: 700px;
+    height: auto;
+}
+#omiyage {
+	font-size: 100px;
+}
+.container_eat img{
+	width: 550px;
+    height: auto;
+}
+
+.eat {
+	font-size: 50px;
+}
+
+.full-screen {
+  height: 100vh; /* ビューポートの高さの100% */
+}
