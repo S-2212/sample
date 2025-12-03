@@ -1,35 +1,67 @@
 @charset "UTF-8";
 
+
+@media screen and (max-width: 480px) {
+
 h1 {
-  padding: 1rem 2rem;
-  color: #fff;
+  color: rgb(7, 7, 7);
   background-image: -webkit-gradient(linear, left top, right top, from(#fa709a), to(#fee140));
-  background-image: -webkit-linear-gradient(left, #fa709a 0%, #fee140 100%);
-  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
   text-align: center;
+margin: 1em;
+margin-top: 0;
  
 }
 
-body {
-	background:radial-gradient(#7fffbf, #fff);
-	height: 300px;
+
+.text span {
+  display: inline-block;
 }
 
-p{
-	margin: 0;
+a.btn-flat {
+	position: relative;
+  overflow: hidden;
+  padding: 1.2rem 3rem;
+  color: #fff;
+  border-radius: 0;
+  background: #000;
+  margin-bottom: 10px; 
+  text-align: center;
+
 }
 
-.full-screen {
-  height: 100vh; /* ビューポートの高さの100% */
-}
-.text {
-	text-align: center;
-	font-size: 30px;
+.container {
+  display: inline-grid;
+  column-gap: 2em;
+  grid-template-columns: repeat(2, auto);
 }
 
-#main_img {
-	width: 350px;
-	height: 200px;
+.box {
+	display: inline-grid;
+  column-gap: 2em;
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-around;
+    margin: 5px 8px;  
+}
+
+}
+
+@media screen and (min-width: 481px) {
+
+h1 {
+  color: #fff;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fa709a), to(#fee140));
+  text-align: center;
+margin: 1em;
+margin-top: 0;
+ 
+}
+a.btn-flat {
+	position: relative;
+  overflow: hidden;
+  padding: 1.2rem 6rem;
+  color: #fff;
+  border-radius: 0;
+  background: #000;
 }
 
 .container {
@@ -42,6 +74,44 @@ p{
     justify-content: center;
     gap: 20px;
 }
+.box {
+	display: flex;
+	justify-content: space-around;
+    margin: 5px 8px;  
+}
+
+}
+
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** */
+body {
+	background:radial-gradient(#7fffbf, #fff);
+	height: 300px;
+
+}
+
+p{
+	margin: 0;
+}
+
+.full-screen {
+  height: 100vh; /* ビューポートの高さの100% */
+width: 100vw;
+
+
+
+}
+.text {
+	text-align: center;
+	font-size: 30px;
+}
+
+#main_img {
+	width: 350px;
+	height: 200px;
+}
+
+
 
 .castle{
 	text-align: center;
@@ -50,11 +120,7 @@ p{
     font-size: 20px;
 }
 
-.box {
-	display: flex;
-	justify-content: space-around;
-    margin: 5px 8px;  
-}
+
 .list_img{
 	width: 160px;
 	height: 120px;
@@ -63,14 +129,7 @@ p{
 	margin: auto;
 }
 
-a.btn-flat {
-	position: relative;
-  overflow: hidden;
-  padding: 1.5rem 6rem;
-  color: #fff;
-  border-radius: 0;
-  background: #000;
-}
+
 
 a.btn-flat span {
   position: relative;
