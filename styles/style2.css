@@ -109,13 +109,7 @@ p{
 	margin: 0;
 }
 
-.full-screen {
-  height: 100vh; /* ビューポートの高さの100% */
-width: 100vw;
 
-
-
-}
 
 #main_img {
 	width: 350px;
@@ -141,10 +135,15 @@ width: 100vw;
 }
 
 
-
+a.btn {
+	width: 60px;
+	height: 30px;
+  text-align: center;
+}
 
 a.btn-flat span {
   position: relative;
+  
 }
 
 a.btn-flat:before {
