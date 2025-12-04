@@ -12,6 +12,12 @@ margin-top: 0;
  
 }
 
+body {
+	background:radial-gradient(#7fffbf, #fff);
+	height: 300px;
+  overflow-x: hidden;
+  text-align: center;
+}
 
 .text span {
   display: inline-block;
@@ -34,6 +40,7 @@ a.btn-flat {
   column-gap: 2em;
   grid-template-columns: repeat(2, auto);
   text-align: center;
+  justify-content: center;
 }
 
 .box {
@@ -89,13 +96,14 @@ a.btn-flat {
 	font-size: 30px;
 }
 
-
-/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** */
 body {
 	background:radial-gradient(#7fffbf, #fff);
 	height: 300px;
   overflow-x: hidden;
 }
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** */
+
 
 p{
 	margin: 0;
@@ -123,14 +131,15 @@ width: 100vw;
     font-size: 20px;
 }
 
+.castle img{
+  background-color: #d1d3f0d2;
+}
 
 .list_img{
 	width: 160px;
 	height: 120px;
 }
-.button0{
-	margin: auto;
-}
+
 
 
 
@@ -158,9 +167,7 @@ a.btn-flat:hover:before {
 }
 
 
-.castle img{
-  background-color: #d1d3f0d2;
-}
+
 
 
 
