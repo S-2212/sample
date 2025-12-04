@@ -33,6 +33,7 @@ a.btn-flat {
   display: inline-grid;
   column-gap: 2em;
   grid-template-columns: repeat(2, auto);
+  text-align: center;
 }
 
 .box {
@@ -41,6 +42,7 @@ a.btn-flat {
   grid-template-columns: repeat(2, auto);
   justify-content: space-around;
     margin: 5px 8px;  
+    text-align: center;
 }
 
 }
@@ -65,8 +67,8 @@ a.btn-flat {
 }
 
 .container {
-	display: flex;
-	margin: auto;
+	  display: flex;
+	  margin: auto;
     text-align: center;
     font-weight: bold;
     color: dimgray;
@@ -156,7 +158,9 @@ a.btn-flat:hover:before {
 }
 
 
-
+.castle img{
+  background-color: #d1d3f0d2;
+}
 
 
 
