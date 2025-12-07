@@ -3,38 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="../styles/style.css">
+<link rel="stylesheet" href="../styles/style2.css">
 </head>
 <body>
-<div class="container container_eat">
+<div class="container container_viewing">
 	<div class="box1">
 		<a id="button1" href ="/">
-			<img class="list_img" src='../images/view.jpg' alt='風景アイコン'>
+			<img class="list_img" src='../images/view.png' alt='風景アイコン'>
 			</a>
-			<p class="eat">風景</p>
+			<p class="view">風景</p>
 	
 	</div>
 	<div class="box1">
 		<a id="button2" href ="/">
-			<img class="list_img" src='../images/sarakura.jpg' alt='夜景アイコン'>
+			<img class="list_img" src='../images/night.png' alt='夜景アイコン'>
 			</a>
-			<p class="eat">夜景</p>
+			<p class="view">夜景</p>
 	
 	</div>
 	<div class="box1">
 		<a id="button3" href ="/">
-			<img class="list_img" src='../images/museum.jpg' alt='美術館アイコン'>
+			<img class="list_img" src='../images/museum.png' alt='美術館アイコン'>
 			</a>
-			<p class="eat">文化・歴史</p>
+			<p class="view">文化・歴史</p>
 	</div>
  </div>	
+
+ <div class="button">
+	<button class="back-button" type="button" onclick="history.back()">戻る</button>
+</div>
 	<script type="text/javascript">
 	 const views = [
 		 'http://www.hiraodai.jp/',
 		 'https://www.gururich-kitaq.com/spot/kawachi-dam',
 		 'https://www.city.kitakyushu.lg.jp/kensetu/05500113.html',
 		 'https://www.gururich-kitaq.com/spot/kanmon-bridge',
-		 'https://www.great-experience.jp/kyushu/adachiyama.html',
+		 'https://www.grview-experience.jp/kyushu/adachiyama.html',
 		 'https://www.shiranoe.com/',
 		 'https://hibikinadagp.org/'
 	 ];
@@ -73,5 +77,6 @@
 	 link3.setAttribute('href', cultures[c]);
 	 
 	</script>
+	
 </body>
 </html>
