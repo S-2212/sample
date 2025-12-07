@@ -1,17 +1,90 @@
 @charset "UTF-8";
 
+
+@media screen and (max-width: 480px) {
+
+h1 {
+  color: rgb(7, 7, 7);
+  background-image: -webkit-gradient(linear, left top, right top, from(#fa709a), to(#fee140));
+  text-align: center;
+margin: 1em;
+margin-top: 0;
+ 
+}
+
+.castle{
+	margin-bottom: 10px;
+}
+
+.box1{
+	margin-bottom: 10px;
+}
+
+
 body {
 	background:radial-gradient(#7fffbf, #fff);
 	height: 300px;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+.text span {
+  display: inline-block;
+}
+
+a.btn-flat {
+	position: relative;
+  overflow: hidden;
+  padding: 1.2rem 3rem;
+  color: #fff;
+  border-radius: 0;
+  background: #000;
+  margin-bottom: 10px; 
+  text-align: center;
+
+}
+
+.container {
+  display: inline-grid;
+  column-gap: 2em;
+  grid-template-columns: repeat(2, auto);
+  text-align: center;
+  justify-content: center;
 }
 
 .box {
-	display: flex;
-	 
+	display: inline-grid;
+  column-gap: 2em;
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-around;
+    margin: 5px 8px;  
+    text-align: center;
 }
+
+}
+
+@media screen and (min-width: 481px) {
+
+h1 {
+  color: #fff;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fa709a), to(#fee140));
+  text-align: center;
+margin: 1em;
+margin-top: 0;
+ 
+}
+a.btn-flat {
+	position: relative;
+  overflow: hidden;
+  padding: 1.2rem 6rem;
+  color: #fff;
+  border-radius: 0;
+  background: #000;
+}
+
 .container {
-	display: flex;
-	margin: auto;
+	  display: flex;
+	  margin: auto;
     text-align: center;
     font-weight: bold;
     color: dimgray;
@@ -19,22 +92,88 @@ body {
     justify-content: center;
     gap: 20px;
 }
-.buy {
-	width: 700px;
-    height: auto;
-}
-#omiyage {
-	font-size: 100px;
-}
-.container_eat img{
-	width: 550px;
-    height: auto;
+.box {
+	display: flex;
+	justify-content: center;
+    margin: 5px 8px;  
 }
 
-.eat {
-	font-size: 50px;
 }
 
-.full-screen {
-  height: 100vh; /* ビューポートの高さの100% */
+.text {
+	text-align: center;
+	font-size: 30px;
 }
+
+body {
+	background:radial-gradient(#7fffbf, #fff);
+	height: 300px;
+  overflow-x: hidden;
+}
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** */
+
+
+p{
+	margin: 0;
+}
+
+
+
+#main_img {
+	width: 350px;
+	height: 200px;
+}
+
+
+
+.castle{
+	text-align: center;
+    font-weight: bold;
+    color: dimgray;
+    font-size: 20px;
+}
+
+.list_img{
+	width: 160px;
+	height: 120px;
+}
+
+
+a.btn {
+	width: 60px;
+	height: 30px;
+  text-align: center;
+}
+
+a.btn-flat span {
+  position: relative;
+  
+}
+
+a.btn-flat:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-96%);
+  transform: translateX(-96%);
+  background: #eb6877;
+}
+
+a.btn-flat:hover:before {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+}
+
+
+
+
+
+
+
+
