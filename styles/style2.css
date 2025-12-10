@@ -2,14 +2,36 @@
 
 @media screen and (max-width: 480px) {
 
-  .container_eat, .container_viewing {
+  .container_eat,
+  .container_viewing {
     margin-top: 50%;
     gap: 30px;
   }
 
-  .container_play, .container_buy {
+  .container_play,
+  .container_buy {
     margin-top: 40%;
     gap: 30px;
+  }
+
+  .container_eat img {
+    width: 100px;
+    height: 80px;
+  }
+
+  .container_buy img {
+    width: 200px;
+    height: 160px;
+  }
+
+  .container_play img {
+    width: 200px;
+    height: 160px;
+  }
+
+  .container_viewing img {
+    width: 100px;
+    height: 80px;
   }
 
 }
@@ -18,6 +40,37 @@
   .container {
     gap: 50px;
   }
+
+  .container_eat img {
+    width: 200px;
+    height: 160px;
+  }
+
+  .container_buy img {
+    width: 300px;
+    height: 250px;
+  }
+
+  .container_play img {
+    width: 300px;
+    height: 250px;
+  }
+
+  .container_viewing img {
+    width: 200px;
+    height: 160px;
+  }
+
+  .play,
+  .omiyage {
+    font-size: 50px;
+  }
+
+  .eat,
+  .view {
+    font-size: 50px;
+  }
+
 }
 
 body {
@@ -70,24 +123,4 @@ body {
 
 .button:hover {
   opacity: 0.5;
-}
-
-.container_eat img {
-  width: 100px;
-  height: 80px;
-}
-
-.container_buy img {
-  width: 200px;
-  height: 160px;
-}
-
-.container_play img {
-  width: 200px;
-  height: 160px;
-}
-
-.container_viewing img {
-  width: 100px;
-  height: 80px;
 }
