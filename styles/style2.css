@@ -1,92 +1,74 @@
 @charset "UTF-8";
 
 body {
-	background:radial-gradient(#7fffbf, #fff);
-	height: 300px;
-}
-
-.box {
-	display: flex;
-	 
-}
-
-.container {
-	display: flex;
-	margin: auto;
-    text-align: center;
-    font-weight: bold;
-    color: dimgray;
-    font-size: 20px;
-    gap: 50px;
-     position: absolute;
-    top: 50%;
-   left: 50%;
-    transform: translate(-50%,-50%);
-}
-.buy {
-	font-size: 100px;
-}
-
-.view {
-	font-size: 40px;
-}
-#omiyage {
-	font-size: 80px;
-}
-#play {
-	font-size: 80px;
-}
-
-.container_eat img{
-	width: 200px;
-	height: 160px;
-}
-
-.container_buy img{
-	width: 400px;
-	height: 320px;
-}
-
-.container_play img{
-	width: 400px;
-	height: 320px;
-}
-
-.container_viewing img{
-	width: 200px;
-	height: 160px;
-}
-
-
-
-.eat {
-	font-size: 50px;
-}
-
-.full-screen {
-  height: 100vh; /* ビューポートの高さの100% */
+  background: radial-gradient(#7fffbf, #fff);
+  height: 300px;
 }
 
 .button {
+  font-size: 18px;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  bottom: 0;
-  width: 100%;
-  padding: 20px;
-   position: absolute;
-   left: 50%;
-    transform: translate(-50%);
+  margin-bottom: 10px;
 }
 
-.back-button {
+.back_button {
   padding: 10px 20px;
-  font-size: 18px;
   background-color: #505048;
   color: rgb(252, 252, 252);
   border: none;
   border-radius: 5px;
-  cursor: pointer;
 }
 
+.container {
+  text-align: center;
+  display: flex;
+  font-weight: bold;
+  color: dimgray;
+  gap: 50px;
+  justify-content: center;
+}
 
+.push {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.push_button {
+  font-size: 25px;
+  padding: 30px 60px;
+  background-color: #e1fa05;
+  color: rgb(240, 5, 115);
+  border: none;
+  border-radius: 5px;
+}
+
+.push:hover {
+  opacity: 0.5;
+}
+
+.button:hover {
+  opacity: 0.5;
+}
+
+.container_eat img {
+  width: 100px;
+  height: 80px;
+}
+
+.container_buy img {
+  width: 200px;
+  height: 160px;
+}
+
+.container_play img {
+  width: 200px;
+  height: 160px;
+}
+
+.container_viewing img {
+  width: 200px;
+  height: 160px;
+}
