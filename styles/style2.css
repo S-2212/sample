@@ -2,9 +2,13 @@
 
 @media screen and (max-width: 480px) {
 
-  .container {
+  .container_eat, .container_viewing {
     margin-top: 50%;
-    margin-bottom: 10px;
+    gap: 30px;
+  }
+
+  .container_play, .container_buy {
+    margin-top: 40%;
     gap: 30px;
   }
 
