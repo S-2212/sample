@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="../styles/style2.css">
+</head>
+
+<body>
+	<div class="container container_viewing">
+		<div class="box1">
+			<img class="list_img" src='../images/view.png' alt='風景アイコン'>
+			<p class="view">風景</p>
+
+		</div>
+		<div class="box1">
+
+			<img class="list_img" src='../images/night.png' alt='夜景アイコン'>
+
+			<p class="view">夜景</p>
+
+		</div>
+		<div class="box1">
+
+			<img class="list_img" src='../images/museum.png' alt='美術館アイコン'>
+
+			<p class="view">文化・歴史</p>
+		</div>
+	</div>
+
+	<div class="push">
+		<a id="push">
+			<button class="push_button" type="button">push</button>
+		</a>
+	</div>
+	<div class="button">
+		<button class="back_button" type="button" onclick="history.back()">戻る</button>
+	</div>
+
+
+
+	<script type="text/javascript">
+		const views = [
+			'viewing_next/castle.html',
+			'viewing_next/shonyudo.html',
+			'viewing_next/sarakura.html'
+		];
+
+		var v = Math.floor(Math.random() * views.length);
+
+		let link1 = document.getElementById('push');
+		link1.setAttribute('href', views[v]);
+
+	</script>
+
+</body>
+
+</html>
