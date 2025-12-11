@@ -26,7 +26,7 @@
 	</div>
 
 	<div class="push">
-	<a id="push">
+	<a id="push" href=" ">
 	<button class="push_button" type="button">push</button>
 	</a>
 	</div>
@@ -35,6 +35,7 @@
 	</div>
 
 	<script type="text/javascript">
+		//URLを配列に格納
 		const foods = [
 			'eat_next/sushi.html',
 			'eat_next/neji.html',
@@ -42,10 +43,24 @@
 			'eat_next/udon.html'
 		];
 
-		var s = Math.floor(Math.random() * foods.length);
+		//sessionStorageの値を取得し、数値に変換
+		let oldValue = sessionStorage.getItem('oldValue');
+		let oldNumber = parseInt(oldValue, 10);
 
-		let link1 = document.getElementById('push');
-		link1.setAttribute('href', foods[s]);
+		//0~配列のデータ総数の範囲で前回と異なる数字になるまで乱数を生成
+		do {
+			var newNumber = Math.floor(Math.random() * foods.length);
+		} while (newNumber === oldNumber);
+
+		//一致するIDの要素を取得し、更新
+		const link1 = document.getElementById('push');
+		link1.setAttribute('href', foods[newNumber]);
+
+		//値を更新
+		oldNumber = newNumber;
+		
+		// 新しい値をsessionStorageに保存
+        sessionStorage.setItem('oldValue', oldNumber);
 
 	</script>
 

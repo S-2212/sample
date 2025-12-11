@@ -32,10 +32,24 @@
 			'buy_next/niku.html'
 		];
 
-		var s = Math.floor(Math.random() * souvenirs.length);
+		//sessionStorageの値を取得し、数値に変換
+		let oldValue = sessionStorage.getItem('oldValue');
+		let oldNumber = parseInt(oldValue, 10);
 
-		let link1 = document.getElementById('push');
-		link1.setAttribute('href', souvenirs[s]);
+		//0~配列のデータ総数の範囲で前回と異なる数字になるまで乱数を生成
+		do {
+			var newNumber = Math.floor(Math.random() * souvenirs.length);
+		} while (newNumber === oldNumber);
+
+		//一致するIDの要素を取得し、更新
+		const link1 = document.getElementById('push');
+		link1.setAttribute('href', souvenirs[newNumber]);
+
+		//値を更新
+		oldNumber = newNumber;
+		
+		// 新しい値をsessionStorageに保存
+        sessionStorage.setItem('oldValue', oldNumber);
 
 	</script>
 
