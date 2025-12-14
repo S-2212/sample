@@ -42,24 +42,63 @@
 			'viewing_next/sarakura.html'
 		];
 
-		//sessionStorageの値を取得し、数値に変換
-		let oldValue = sessionStorage.getItem('oldValue');
-		let oldNumber = parseInt(oldValue, 10);
+		if (views.length >= 2) {
+			//ウェブブラウザ上でpageshowイベント発生時（通常のロード時もブラウザバック時も）に、
+			//event.persistedでtrue（キャッシュから復元）、それ以外はfalseを返す
+			window.addEventListener('pageshow', function (event) {
+				if (event.persisted) {
+					//以下ブラウザバックでのページロード時の動作（２回目以降）
 
-		//0~配列のデータ総数の範囲で前回と異なる数字になるまで乱数を生成
-		do {
-			var newNumber = Math.floor(Math.random() * views.length);
-		} while (newNumber === oldNumber);
+					//sessionStorageの値を取得し、数値に変換
+					let oldValue = sessionStorage.getItem('oldValue');
+					let oldNumber = parseInt(oldValue, 10);
 
-		//一致するIDの要素を取得し、更新
-		const link1 = document.getElementById('push');
-		link1.setAttribute('href', views[newNumber]);
+					//0~配列のデータ総数の範囲で前回と異なる数字になるまで乱数を生成
+					do {
+						var newNumber = Math.floor(Math.random() * views.length);
+					} while (newNumber === oldNumber);
 
-		//値を更新
-		oldNumber = newNumber;
-		
-		// 新しい値をsessionStorageに保存
-        sessionStorage.setItem('oldValue', oldNumber);
+					//一致するIDの要素を取得し、更新
+					const link1 = document.getElementById('push');
+					link1.setAttribute('href', views[newNumber]);
+
+					//値を更新
+					oldNumber = newNumber;
+
+					// 新しい値をsessionStorageに保存
+					sessionStorage.setItem('oldValue', oldNumber);
+				} else {
+					//以下通常のページロード時の動作（初回表示時のみ）
+					let oldValue = sessionStorage.getItem('oldValue');
+
+					if (oldValue === null) {
+						const link1 = document.getElementById('push');
+						link1.setAttribute('href', views[0]);
+						sessionStorage.setItem('oldValue', 0);
+					} else {
+						let oldNumber = parseInt(oldValue, 10);
+
+						//0~配列のデータ総数の範囲で前回と異なる数字になるまで乱数を生成
+						do {
+							var newNumber = Math.floor(Math.random() * views.length);
+						} while (newNumber === oldNumber);
+
+						//一致するIDの要素を取得し、更新
+						const link1 = document.getElementById('push');
+						link1.setAttribute('href', views[newNumber]);
+
+						//値を更新
+						oldNumber = newNumber;
+
+						// 新しい値をsessionStorageに保存
+						sessionStorage.setItem('oldValue', oldNumber);
+					}
+				}
+			});
+		} else {
+			const link1 = document.getElementById('push');
+			link1.setAttribute('href', views[0]);
+		}
 
 	</script>
 
