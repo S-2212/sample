@@ -32,6 +32,9 @@
 			'buy_next/niku.html'
 		];
 
+	window.addEventListener('pageshow', function(event) {
+	if (event.persisted) {
+		consolelog('ページがキャッシュから復帰しました。スクリプトを再実行します。');
 		//sessionStorageの値を取得し、数値に変換
 		let oldValue = sessionStorage.getItem('oldValue');
 		let oldNumber = parseInt(oldValue, 10);
@@ -51,6 +54,32 @@
 		// 新しい値をsessionStorageに保存
         sessionStorage.setItem('oldValue', oldNumber);
 		document.getElementById('output').textContent = oldNumber;
+	} else {
+		console.log('通常のページロードです。');
+		let oldValue = sessionStorage.getItem('oldValue');
+		let oldNumber = parseInt(oldValue, 10);
+
+		//0~配列のデータ総数の範囲で前回と異なる数字になるまで乱数を生成
+		do {
+			var newNumber = Math.floor(Math.random() * souvenirs.length);
+		} while (newNumber === oldNumber);
+
+		//一致するIDの要素を取得し、更新
+		const link1 = document.getElementById('push');
+		link1.setAttribute('href', souvenirs[newNumber]);
+
+		//値を更新
+		oldNumber = newNumber;
+		
+		// 新しい値をsessionStorageに保存
+        sessionStorage.setItem('oldValue', oldNumber);
+		document.getElementById('output').textContent = oldNumber;
+	}
+
+		
+
+
+	});
 	</script>
 
 </body>
