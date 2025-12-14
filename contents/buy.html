@@ -34,7 +34,7 @@
 
 	window.addEventListener('pageshow', function(event) {
 	if (event.persisted) {
-		consolelog('ページがキャッシュから復帰しました。スクリプトを再実行します。');
+		console.log('ページがキャッシュから復帰しました。スクリプトを再実行します。');
 		//sessionStorageの値を取得し、数値に変換
 		let oldValue = sessionStorage.getItem('oldValue');
 		let oldNumber = parseInt(oldValue, 10);
