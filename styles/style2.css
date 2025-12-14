@@ -1,6 +1,9 @@
 @charset "UTF-8";
 
 @media screen and (max-width: 480px) {
+  .push_button {
+    font-size: 15px;
+  }
 
   .container_eat,
   .container_viewing {
@@ -37,6 +40,10 @@
 }
 
 @media screen and (min-width: 481px) {
+  .push_button {
+    font-size: 25px;
+  }
+
   .container {
     gap: 50px;
   }
@@ -63,7 +70,7 @@
 
   .play,
   .omiyage {
-    font-size: 50px;
+    font-size: 45px;
   }
 
   .eat,
@@ -109,8 +116,7 @@ body {
 }
 
 .push_button {
-  font-size: 25px;
-  padding: 30px 60px;
+  padding: 20px 50px;
   background-color: #e1fa05;
   color: rgb(240, 5, 115);
   border: none;
